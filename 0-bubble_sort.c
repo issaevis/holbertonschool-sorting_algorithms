@@ -14,9 +14,14 @@ void bubble_sort(int *array, size_t size)
 	size_t i, check = 0;
 	int temp;
 
+	if (size == 1 || size == 0)
+	{
+		print_array(array, size);
+		return;
+	}
 	while (check != 1)
 	{
-		for (i = 0; i <= size; i++)
+		for (i = 0; i < size; i++)
 		{
 			if (i == size)
 				continue;
@@ -29,9 +34,9 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 			}
 		}
-		for (i = 0; i <= size; i++)
+		for (i = 0; i < size; i++)
 		{
-			if (i == size)
+			if (i == (size - 1))
 				check = 1;
 			if (array[i] > array[i + 1])
 				break;
