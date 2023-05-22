@@ -16,7 +16,6 @@ void bubble_sort(int *array, size_t size)
 
 	if (size == 1)
 	{
-		print_array(array, size);
 		return;
 	}
 	else if (size == 0)
