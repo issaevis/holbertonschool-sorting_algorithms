@@ -14,16 +14,19 @@ void bubble_sort(int *array, size_t size)
 	size_t i, check = 0;
 	int temp;
 
-	if (size == 1 || size == 0)
+	if (size == 1)
 	{
 		print_array(array, size);
 		return;
 	}
+	else if (size == 0)
+		return;
+
 	while (check != 1)
 	{
 		for (i = 0; i < size; i++)
 		{
-			if (i == size)
+			if (i == size - 1)
 				continue;
 
 			if (array[i] > array[i + 1])
